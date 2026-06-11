@@ -43,6 +43,7 @@
 ###########################################################################################
 
 import numpy as np
+import streamlit as st
 # L = [1, 2, 3, 4, 5]
 # L = [1, 2, 3, 4, 5, 'Gwalior']
 # A = np.array(L)
@@ -143,3 +144,39 @@ import numpy as np
 # S = np.loadtxt("F:/NumPy/student.csv", delimiter = ',')
 # S = np.loadtxt("F:/NumPy/student.csv", skiprows = 1, delimiter = ',')
 # print(S)
+
+
+# House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+# T = sorted(list(set(House)))
+# D = {}
+# for i in T:
+#     D[i]=House.count(i) 
+
+# for i in D:
+#     print(i, ':', D[i])
+
+# st.dataframe(D)
+
+
+
+# House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+# A = np.array(House)
+# F = np.unique(A, return_counts=True)
+# print(F)
+
+
+
+House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+T = sorted(list(set(House)))
+F = {}
+RF = {}
+for i in T:
+    F[i] = House.count(T)
+    RF[i] = round((House.count(i) / len(House)) * 100, 2)
+
+for i in F:
+    print(i, ':', F[i])
+for i in RF:
+    print(i, ':', RF[i])
+
+# st.dataframe(D)
