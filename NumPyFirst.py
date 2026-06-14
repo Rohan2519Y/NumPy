@@ -166,17 +166,32 @@ import streamlit as st
 
 
 
-House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
-T = sorted(list(set(House)))
-F = {}
-RF = {}
-for i in T:
-    F[i] = House.count(T)
-    RF[i] = round((House.count(i) / len(House)) * 100, 2)
+# House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+# T = sorted(list(set(House)))
+# F = {}
+# RF = {}
+# for i in T:
+#     F[i] = House.count(T)
+#     RF[i] = round((House.count(i) / len(House)) * 100, 2)
 
-for i in F:
-    print(i, ':', F[i])
-for i in RF:
-    print(i, ':', RF[i])
+# for i in F:
+#     print(i, ':', F[i])
+# for i in RF:
+#     print(i, ':', RF[i])
 
 # st.dataframe(D)
+
+
+House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+A = np.array(House)
+F = np.unique(A, return_counts=True)
+NM = F[0]
+FR = F[1]
+S= FR.sum()
+RF = FR/S
+print(RF)
+PRF = RF*100
+print(PRF)
+CRF = np.cumsum(FR)
+# CRF = np.cumprod(FR)
+print(CRF)
