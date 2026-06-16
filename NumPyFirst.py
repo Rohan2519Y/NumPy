@@ -182,16 +182,16 @@ import streamlit as st
 # st.dataframe(D)
 
 
-House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
-A = np.array(House)
-F = np.unique(A, return_counts=True)
-NM = F[0]
-FR = F[1]
-S= FR.sum()
-RF = FR/S
-print(RF)
-PRF = RF*100
-print(PRF)
-CRF = np.cumsum(FR)
+# House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
+# A = np.array(House)
+# F = np.unique(A, return_counts=True)
+# NM = F[0]
+# FR = F[1]
+# S= FR.sum()
+# RF = FR/S
+# print(RF)
+# PRF = RF*100
+# print(PRF)
+# CRF = np.cumsum(FR)
 # CRF = np.cumprod(FR)
-print(CRF)
+# print(CRF)
