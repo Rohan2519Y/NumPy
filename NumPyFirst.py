@@ -44,6 +44,7 @@
 
 import numpy as np
 import streamlit as st
+import math
 # L = [1, 2, 3, 4, 5]
 # L = [1, 2, 3, 4, 5, 'Gwalior']
 # A = np.array(L)
@@ -195,3 +196,15 @@ import streamlit as st
 # CRF = np.cumsum(FR)
 # CRF = np.cumprod(FR)
 # print(CRF)
+
+
+N = np.array([25, 26, 32, 37, 40])
+Mean = np.mean(N)
+K = N - Mean
+S = np.sum(K*K)
+print(S)
+ST = S/len(N)
+print(ST)
+SQRT = math.sqrt(ST)
+print(round(SQRT, 2))
+print(np.std(N))
