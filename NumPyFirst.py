@@ -270,6 +270,8 @@ import math
 data = np.dtype([])
 
 arr = np.array([10, 13, 16, 20, 12])
+X = [1, 2, 3, 4]
+Y = [5, 6, 7, 8]
 # sort_ind = np.argsort(arr)
 # print(sort_ind)
 # print(arr[sort_ind])
@@ -279,4 +281,13 @@ arr = np.array([10, 13, 16, 20, 12])
 # print(np.full((2, 2), 100))
 # print(np.eye(3))
 # print(np.diag([3, 2, 3, 4]))
-print(np.logspace(1, 3, num = 30, base = 11))
+# print(np.logspace(1, 3, num = 30, base = 11))
+# print(np.linspace(1, 10, num = 5))
+# print(np.logspace(1, 5, num = 4, base = 2))
+# print(np.meshgrid(X, Y))
+# print(np.random.rand(2, 2))
+# print(np.random.randn(2, 2))
+# print(np.random.randint(1, 10,(2, 2)))
+# print(np.random.choice([1, 2, 3, 4, 5], (2, 2)))
+# print(np.diff([1, 2, 3, 4]))
+print(np.clip([1, 5, 9], 2, 7))
