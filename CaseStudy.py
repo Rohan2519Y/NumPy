@@ -23,7 +23,7 @@ myarray1 = np.array([[2.7, -2, -19], [0, 3.4, 99.9], [10.6, 0, 13]])
 
 #   E ##################################################################
 # myarray2 = np.array(np.arange(4, 41, step=4, dtype=float).reshape(3, 3))
-myarray2 = np.array(np.arange(4, 61, step=4, dtype=float).reshape(3, 3))
+myarray2 = np.array(np.arange(4, 61, step=4, dtype=float).reshape(3, 5))
 
 
 
@@ -150,3 +150,185 @@ myarray2 = np.array(np.arange(4, 61, step=4, dtype=float).reshape(3, 3))
 
 
 # 8 ====================================================================
+#   A ##################################################################
+# print(myarray2)
+splt = np.split(myarray2, [1, 2, 3, 4], axis=1)
+myarray2A = splt[0]
+myarray2B = splt[1]
+myarray2C = splt[2]
+myarray2D = splt[3]
+myarray2E = splt[4]
+# print(myarray2A)
+# print(myarray2B)
+# print(myarray2C)
+# print(myarray2D)
+# print(myarray2E)
+
+
+
+#   B ##################################################################
+splt = np.split(zero, [2, 5, 7, 8])
+zeroA = splt[0]
+zeroB = splt[1]
+zeroC = splt[2]
+zeroD = splt[3]
+# print(zeroA)
+# print(zeroB)
+# print(zeroC)
+# print(zeroD)
+
+
+
+#   C ##################################################################
+# print(np.concatenate([myarray2A, myarray2B, myarray2C], axis=1))
+
+
+
+
+
+
+
+# 9 ====================================================================
+myarray4 = np.arange(-1 , 9.5, step=0.25).reshape(14, 3)
+# print(myarray4)
+
+
+
+
+
+
+
+# 10 ====================================================================
+#   A ##################################################################
+# print(np.sum(myarray4))
+
+
+
+#   B ##################################################################
+# print(np.sum(myarray4, axis=1))
+
+
+
+#   C ##################################################################
+# print(np.sum(myarray4, axis=0))
+
+
+
+#   D ##################################################################
+# print(np.max(myarray4))
+
+
+
+#   E ##################################################################
+# print(np.min(myarray4, axis=1))
+
+
+
+#   F ##################################################################
+# print(np.mean(myarray4, axis=1))
+
+
+
+#   G ##################################################################
+# print(np.std(myarray4, axis=0))
+
+
+
+
+
+
+
+
+# Case Study -----------------------------------------------------------
+File = np.loadtxt("F:/NumPy/iris.data", dtype=str, delimiter=',')
+# print("Sepal Length\tSepal Width\tPetal Length\tPetal Width\tIris")
+# for i in File:
+#     print(f'{i[0]}\t\t{i[1]}\t\t{i[2]}\t\t{i[3]}\t\t{i[4]}\t')
+
+
+
+#1 ##################################################################
+iris = np.array(File)
+# print(iris)
+
+
+
+#2 ##################################################################
+iris = np.delete(iris, 4, axis=0)
+
+
+
+#3 ##################################################################
+# print(np.shape(iris), np.ndim(iris), np.size(iris))
+
+
+
+#4 ##################################################################
+splt = np.split(iris, [49, 99])
+iris1 = splt[0]
+iris2 = splt[1]
+iris3 = splt[2]
+
+
+
+#5 ##################################################################
+# print(iris1)
+# print(iris2)
+# print(iris3)
+
+
+
+#6 ##################################################################
+header = np.array(['Sepal Length', 'Sepal Width', 'Petal Length', 'Petal Width', 'Species No.'])
+
+
+
+#7 ##################################################################
+# print(header)
+
+
+
+#8 ##################################################################
+iris_max = np.max(iris[:, :4].astype(float), axis=0)
+iris_min = np.min(iris[:, :4].astype(float), axis=0)
+iris_avg = np.round(np.mean(iris[:, :4].astype(float), axis=0), 2)
+iris_std = np.round(np.std(iris[:, :4].astype(float), axis=0), 2)
+# print("Max :", iris_max)
+# print("Min :", iris_min)
+# print("Avg :", iris_avg)
+# print("Std :", iris_std)
+
+
+
+#9 ##################################################################
+# iris1_max = np.max(iris1[:, :4].astype(float), axis=0)
+# iris2_max = np.max(iris2[:, :4].astype(float), axis=0)
+# iris3_max = np.max(iris3[:, :4].astype(float), axis=0)
+# print("Max 1 :", iris1_max)
+# print("Max 2 :", iris2_max)
+# print("Max 3 :", iris3_max)
+
+# iris1_min = np.min(iris1[:, :4].astype(float), axis=0)
+# iris2_min = np.min(iris2[:, :4].astype(float), axis=0)
+# iris3_min = np.min(iris3[:, :4].astype(float), axis=0)
+# print("Min 1 :", iris1_min)
+# print("Min 2 :", iris2_min)
+# print("Min 3 :", iris3_min)
+
+# iris1_avg = np.round(np.mean(iris1[:, :4].astype(float), axis=0), 2)
+# iris2_avg = np.round(np.mean(iris2[:, :4].astype(float), axis=0), 2)
+# iris3_avg = np.round(np.mean(iris3[:, :4].astype(float), axis=0), 2)
+# print("Avg 1 :", iris1_avg)
+# print("Avg 2 :", iris2_avg)
+# print("Avg 3 :", iris3_avg)
+
+# iris1_std = np.round(np.std(iris1[:, :4].astype(float), axis=0), 2)
+# iris2_std = np.round(np.std(iris2[:, :4].astype(float), axis=0), 2)
+# iris3_std = np.round(np.std(iris3[:, :4].astype(float), axis=0), 2)
+# print("Std 1 :", iris1_std)
+# print("Std 2 :", iris2_std)
+# print("Std 3 :", iris3_std)
+
+
+
+#10 ##################################################################
