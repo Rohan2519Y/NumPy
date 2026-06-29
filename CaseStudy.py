@@ -301,30 +301,30 @@ iris_std = np.round(np.std(iris[:, :4].astype(float), axis=0), 2)
 
 
 #9 ##################################################################
-# iris1_max = np.max(iris1[:, :4].astype(float), axis=0)
-# iris2_max = np.max(iris2[:, :4].astype(float), axis=0)
-# iris3_max = np.max(iris3[:, :4].astype(float), axis=0)
+iris1_max = np.max(iris1[:, :4].astype(float), axis=0)
+iris2_max = np.max(iris2[:, :4].astype(float), axis=0)
+iris3_max = np.max(iris3[:, :4].astype(float), axis=0)
 # print("Max 1 :", iris1_max)
 # print("Max 2 :", iris2_max)
 # print("Max 3 :", iris3_max)
 
-# iris1_min = np.min(iris1[:, :4].astype(float), axis=0)
-# iris2_min = np.min(iris2[:, :4].astype(float), axis=0)
-# iris3_min = np.min(iris3[:, :4].astype(float), axis=0)
+iris1_min = np.min(iris1[:, :4].astype(float), axis=0)
+iris2_min = np.min(iris2[:, :4].astype(float), axis=0)
+iris3_min = np.min(iris3[:, :4].astype(float), axis=0)
 # print("Min 1 :", iris1_min)
 # print("Min 2 :", iris2_min)
 # print("Min 3 :", iris3_min)
 
-# iris1_avg = np.round(np.mean(iris1[:, :4].astype(float), axis=0), 2)
-# iris2_avg = np.round(np.mean(iris2[:, :4].astype(float), axis=0), 2)
-# iris3_avg = np.round(np.mean(iris3[:, :4].astype(float), axis=0), 2)
+iris1_avg = np.round(np.mean(iris1[:, :4].astype(float), axis=0), 2)
+iris2_avg = np.round(np.mean(iris2[:, :4].astype(float), axis=0), 2)
+iris3_avg = np.round(np.mean(iris3[:, :4].astype(float), axis=0), 2)
 # print("Avg 1 :", iris1_avg)
 # print("Avg 2 :", iris2_avg)
 # print("Avg 3 :", iris3_avg)
 
-# iris1_std = np.round(np.std(iris1[:, :4].astype(float), axis=0), 2)
-# iris2_std = np.round(np.std(iris2[:, :4].astype(float), axis=0), 2)
-# iris3_std = np.round(np.std(iris3[:, :4].astype(float), axis=0), 2)
+iris1_std = np.round(np.std(iris1[:, :4].astype(float), axis=0), 2)
+iris2_std = np.round(np.std(iris2[:, :4].astype(float), axis=0), 2)
+iris3_std = np.round(np.std(iris3[:, :4].astype(float), axis=0), 2)
 # print("Std 1 :", iris1_std)
 # print("Std 2 :", iris2_std)
 # print("Std 3 :", iris3_std)
@@ -332,3 +332,75 @@ iris_std = np.round(np.std(iris[:, :4].astype(float), axis=0), 2)
 
 
 #10 ##################################################################
+sepalminlen = np.min(iris[:, 0].astype(float))
+sepalminwidth = np.min(iris[:, 1].astype(float))
+petalminlen = np.min(iris[:, 2].astype(float))
+petalminwidth = np.min(iris[:, 3].astype(float))
+# print(sepalminlen)
+# print(sepalminwidth)
+# print(petalminlen)
+# print(petalminwidth)
+
+sepalminlensetosa = np.min(iris[:49, 0].astype(float))
+sepalminwidthsetosa = np.min(iris[:49, 1].astype(float))
+petalminlensetosa = np.min(iris[:49, 2].astype(float))
+petalminwidthsetosa = np.min(iris[:49, 3].astype(float))
+# print(sepalminlensetosa)
+# print(sepalminwidthsetosa)
+# print(petalminlensetosa)
+# print(petalminwidthsetosa)
+
+sepalminlensetosaVericolor = np.min(iris[49:99, 0].astype(float))
+sepalminwidthsetosaVericolor = np.min(iris[49:99, 1].astype(float))
+petalminlensetosaVericolor = np.min(iris[49:99, 2].astype(float))
+petalminwidthsetosaVericolor = np.min(iris[49:99, 3].astype(float))
+# print(sepalminlensetosaVericolor)
+# print(sepalminwidthsetosaVericolor)
+# print(petalminlensetosaVericolor)
+# print(petalminwidthsetosaVericolor)
+
+sepalminlenVirginica = np.min(iris[99:, 0].astype(float))
+sepalminwidthVirginica = np.min(iris[99:, 1].astype(float))
+petalminlenVirginica = np.min(iris[99:, 2].astype(float))
+petalminwidthVirginica = np.min(iris[99:, 3].astype(float))
+# print(sepalminlenVirginica)
+# print(sepalminwidthVirginica)
+# print(petalminlenVirginica)
+# print(petalminwidthVirginica)
+
+# print("\t\tIris Setosa\tIris Versicolor\tIris Virginica")
+# print("---------------------------------------------------------------")
+# print(f"Sepal Length\t{sepalminlensetosa > sepalminlen}\t\t{sepalminlensetosaVericolor > sepalminlen}\t\t{sepalminlenVirginica > sepalminlen}")
+# print(f"Sepal Width\t{sepalminwidthsetosa > sepalminwidth}\t\t{sepalminwidthsetosaVericolor > sepalminwidth}\t\t{sepalminwidthVirginica > sepalminwidth}")
+# print(f"Sepal Length\t{petalminlensetosa > petalminlen}\t\t{petalminlensetosaVericolor > petalminlen}\t\t{petalminlenVirginica > petalminlen}")
+# print(f"Sepal Length\t{petalminwidthsetosa > petalminwidth}\t\t{petalminwidthsetosaVericolor > petalminwidth}\t\t{petalminwidthVirginica > petalminwidth}")
+
+
+
+#11 ##################################################################
+sepalavgwidthsetosa = np.mean(iris[:49, 1].astype(float))
+sepalavgwidthvirginica = np.mean(iris[99:, 1].astype(float))
+# print(sepalavgwidthsetosa, sepalavgwidthvirginica)
+# print(sepalavgwidthsetosa > sepalavgwidthvirginica)
+# print(sepalavgwidthsetosa < sepalavgwidthvirginica)
+
+
+
+#12 ##################################################################
+petalavglensetosa = np.mean(iris[:49, 2].astype(float))
+petalavglenvirginica = np.mean(iris[99:, 2].astype(float))
+# print(petalavglensetosa, petalavglenvirginica)
+# print(petalavglensetosa > petalavglenvirginica)
+# print(petalavglensetosa < petalavglenvirginica)
+
+
+
+#13 ##################################################################
+petalavgwidthsetosa = np.mean(iris[:49, 3].astype(float))
+petalavgwidthvirginica = np.mean(iris[99:, 3].astype(float))
+# print(petalavgwidthsetosa, petalavgwidthvirginica)
+# print(petalavgwidthsetosa > petalavgwidthvirginica)
+# print(petalavgwidthsetosa < petalavgwidthvirginica)
+
+
+#14 ##################################################################
