@@ -403,4 +403,11 @@ petalavgwidthvirginica = np.mean(iris[99:, 3].astype(float))
 # print(petalavgwidthsetosa < petalavgwidthvirginica)
 
 
+
 #14 ##################################################################
+# np.savetxt('F:/NumPy/IrisMeanValues.txt', iris_avg, delimiter=',', fmt = '%f')
+
+
+
+#15 ##################################################################
+# np.savetxt('F:/NumPy/IrisStat.txt', [iris_max, iris_avg, iris_min], delimiter=',', fmt = '%f')
