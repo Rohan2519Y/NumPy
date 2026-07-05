@@ -197,6 +197,221 @@ import numpy as np
 
 
 # 24 - How to make a NumPy array read-only?
-Arr = np.array([1, 2, 3, 4, 5])
-Arr.flags.writeable = False
-print(Arr)
+# Arr = np.array([1, 2, 3, 4, 5])
+# Arr.flags.writeable = False
+# print(Arr)
+
+
+
+# 25 - Get the maximum value from given matrix
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(np.max(Arr))
+
+
+
+# 26 - Get the minimum value from given matrix
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(np.min(Arr))
+
+
+
+# 27 - Find the number of rows and columns of a given matrix using NumPy
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(Arr.shape)
+
+
+
+# 28 - Select the elements from a given matrix
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(Arr[0][0])
+# print(Arr[1:])
+
+
+
+# 29 - Find the sum of values in a matrix
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(np.sum(Arr))
+
+
+
+# 30 - Calculate the sum of the diagonal elements of a NumPy array
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(np.sum(np.diag(Arr)))
+
+
+
+# 31 - Adding and Subtracting Matrices in Python
+# Arr1 = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# Arr2 = np.array([
+#     [4, 5, 6],
+#     [4, 5, 6],
+#     [4, 5, 6]
+# ])
+# print(Arr2 - Arr1)
+# print(Arr2 + Arr1)
+
+
+
+# 32 - Ways to add row/columns in numpy array
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# RowArr = np.vstack([Arr, [1, 2, 3]])
+# print(RowArr)
+# ColArr = np.hstack([Arr, [[4], [4], [4]]])
+# print(ColArr)
+
+
+
+# 33 - Matrix Multiplication in NumPy
+# Arr1 = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# Arr2 = np.array([
+#     [4, 5, 6],
+#     [4, 5, 6],
+#     [4, 5, 6]
+# ])
+# print(Arr1 @ Arr2)
+
+
+
+# 34 - Get the eigen values of a matrix
+# Arr = np.array([
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ])
+# print(np.linalg.eig(Arr)[0])
+
+
+
+# 35 - How to Calculate the determinant of a matrix using NumPy?
+# Arr = np.array([
+#     [1, 2, 3],
+#     [6, 2, 6],
+#     [7, 9, 9]
+# ])
+# print(np.linalg.det(Arr))
+
+
+
+# 36 - How to inverse a matrix using NumPy
+# Arr = np.array([
+#     [1, 2, 3],
+#     [6, 2, 6],
+#     [7, 9, 9]
+# ])
+# print(np.linalg.inv(Arr))
+
+
+
+
+# 37 - How to count the frequency of unique values in NumPy array?
+# Arr = np.array([
+#     [1, 2, 3],
+#     [6, 2, 6],
+#     [7, 9, 9]
+# ])
+# V, C = np.unique(Arr, return_counts=True)
+# F = dict(zip(V.tolist(), C.tolist()))
+# print(F)
+
+
+
+# 38 - Multiply matrices of complex numbers using NumPy in Python
+# A = np.array([[1+2j, 3+4j], [5+6j, 7+8j]])
+# B = np.array([[2+1j, 4+3j], [6+5j, 8+7j]])
+# print(A @ B)
+
+
+
+# 39 - Compute the outer product of two given vectors using NumPy in Python
+# A = np.array([1, 3, 5])
+# B = np.array([2, 4, 6])
+# print(np.outer(A, B))
+
+
+
+# 40 - Calculate inner, outer, and cross products of matrices and vectors using NumPy
+# A = np.array([1, 3, 5])
+# B = np.array([2, 4, 6])
+# print(np.inner(A, B))
+# print(np.outer(A, B))
+# print(np.cross(A, B))
+
+
+
+
+# 41 - Compute the covariance matrix of two given NumPy arrays
+# A = np.array([1, 3, 5])
+# B = np.array([2, 4, 6])
+# print(np.cov(A, B))
+
+
+
+# 42 - Convert covariance matrix to correlation matrix using Python
+# A = np.array([1, 3, 5])
+# B = np.array([2, 4, 6])
+# cov = np.cov(A, B)
+# d = np.sqrt(np.diag(cov))
+# corr = cov / np.outer(d, d)
+# print(corr)
+
+
+
+# 43 - Compute the Kronecker product of two mulitdimension NumPy arrays
+# Arr1 = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# Arr2 = np.array([
+#     [4, 5, 6],
+#     [4, 5, 6],
+#     [4, 5, 6]
+# ])
+# print(np.kron(Arr1, Arr2))
+
+
+
+# 44 - Convert the matrix into a list
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# Arr = Arr.tolist()
+# print(Arr)

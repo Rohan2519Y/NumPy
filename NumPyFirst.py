@@ -143,8 +143,8 @@ import math
 # S = np.array(Student)
 # np.savetxt("F:/NumPy/student.csv", S, delimiter = ',', fmt = '%i', header = "RKVM Gwalior", footer = "1st year")
 # S = np.loadtxt("F:/NumPy/student.csv", delimiter = ',')
-# S = np.loadtxt("F:/NumPy/student.csv", skiprows = 1, delimiter = ',')
-# print(S)
+S = np.loadtxt("F:/NumPy/student.csv", skiprows = 1, delimiter = ',')
+print(S)
 
 
 # House = [2,2,2,3,3,3,3,4,4,4,4,4,4,4,4,4,4,5,5,5,5,6,6,7,7,7,8,9,9,10]
@@ -290,4 +290,4 @@ Y = [5, 6, 7, 8]
 # print(np.random.randint(1, 10,(2, 2)))
 # print(np.random.choice([1, 2, 3, 4, 5], (2, 2)))
 # print(np.diff([1, 2, 3, 4]))
-print(np.clip([1, 5, 9], 2, 7))
+# print(np.clip([1, 5, 9], 2, 7))
