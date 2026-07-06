@@ -415,3 +415,115 @@ import numpy as np
 # ])
 # Arr = Arr.tolist()
 # print(Arr)
+
+
+
+# 45 - Replace NumPy array elements that doesn’t satisfy the given condition
+# Arr = np.array([
+#     [1, 2, 3],
+#     [1, 2, 3],
+#     [1, 2, 3]
+# ])
+# print(np.where(Arr >= 3, Arr, 0))
+
+
+
+# 46 - Return the indices of elements where the given condition is satisfied
+# Arr = np.array([23, 78, 34, 57, 17, 94, 30, 50])
+# print(np.where(Arr >= 30)[0])
+
+
+
+# 47 - Replace NaN values with average of columns
+# Arr = np.array([
+#     [np.nan, 2, 3],
+#     [1, np.nan, 3],
+#     [1, 2, np.nan]
+# ])
+# print(np.nan_to_num(Arr, 0))
+
+
+
+# 48 - Replace negative value with zero in numpy array
+# Arr = np.array([
+#     [-1, 2, 3],
+#     [1, -2, 3],
+#     [1, 2, -3]
+# ])
+# print(np.where(Arr > 0, Arr, 0))
+
+
+
+# 49 - How to get values of an NumPy array at certain index positions?
+# Arr = np.array([23, 78, 34, 57, 17, 94, 30, 50])
+# print(Arr[[0, 1, 2, 3]])
+
+
+
+# 50 - Find indices of elements equal to zero in a NumPy array
+# Arr = np.array([23, 0, 34, 57, 0, 94, 30, 50])
+# print(np.where(Arr == 0)[0])
+
+
+
+# 51 - How to Remove columns in Numpy array that contains non-numeric values?
+# Arr = np.array([
+#     [1, 'A', 10],
+#     [2, 'B', 20],
+#     [3, 'C', 30]
+# ], dtype=object)
+
+# Arr1 = []
+# for i in Arr:
+#     for j in range(len(i)):
+#         if not isinstance(i[j], (int, float)):
+#             Arr1 = np.delete(Arr, j, axis=1)
+#             break
+# print(Arr1)
+
+
+
+# 52 - How to access different rows of a multidimensional NumPy array?
+# Arr = np.array([
+#     [1, 'A', 10],
+#     [2, 'B', 20],
+#     [3, 'C', 30]
+# ])
+# print(Arr[0:2])
+
+
+
+# 53 - Get row numbers of NumPy array having element larger than X
+# Arr = np.array([
+#     [10, 20, 60],
+#     [40, 50, 60],
+#     [15, 25, 35],
+#     [5, 8, 9]
+# ])
+# X = 45
+# print(np.where(np.any(Arr > X, axis = 1))[0])
+
+
+
+# 54 - Get filled the diagonals of NumPy array
+# Arr = np.array([
+#     [10, 20, 60],
+#     [40, 50, 60],
+#     [15, 25, 35]
+# ])
+# np.fill_diagonal(Arr, 0)
+# print(Arr)
+
+
+
+# 55 - Check elements present in the NumPy array
+# Arr = np.array([1, 2, 3, 4, 5, 6, 8, 9])
+# print(7 in Arr)
+# print(2 in Arr)
+
+
+
+# 56 - Combined array index by index
+# Arr1 = np.array([1, 2, 3, 4])
+# Arr2 = np.array([1, 2, 3, 4])
+# print(np.hstack([Arr1, Arr2]))
